@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Prata&display=swap');
+
+.statistics{
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.statistics-list{
+    display: flex;
+  
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    
+}
+
+.title{
+    border: 1px solid;
+    padding: 0px 90px 10px 90px;
+}

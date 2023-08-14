@@ -1,0 +1,23 @@
+ .type{
+    display: flex;
+    gap: 100px;
+    font-weight: bold;
+    padding: 10px;
+    color: blue;
+ }
+
+ .type-list{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+     
+ }
+
+ .list{
+    padding: 5px;
+    border: 1px solid;
+ }
+
+ .position{
+    margin-top: 50px;
+ }
