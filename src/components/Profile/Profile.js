@@ -1,12 +1,15 @@
-import React from "react";
-import "./Profile.css"
+import React from 'react';
+import './Profile.css';
+import PropTypes from 'prop-types';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
+
+ 
   return (
     <div className="profile">
       <div className="description">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+          src={avatar}
           alt="User avatar"
           className="avatar"
         />
@@ -22,7 +25,7 @@ export default function Profile({ username, tag, location, avatar, stats }) {
         </li>
         <li className="stats__pos">
           <span className="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span className="quantity">{stats.views}</span>
         </li>
         <li className="stats__pos">
           <span className="label">Likes</span>
@@ -31,4 +34,13 @@ export default function Profile({ username, tag, location, avatar, stats }) {
       </ul>
     </div>
   );
+}
+
+Profile.propType ={
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
+
 }

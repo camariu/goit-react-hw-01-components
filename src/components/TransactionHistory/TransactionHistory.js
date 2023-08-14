@@ -1,5 +1,6 @@
 import React from "react";
 import "./TransactionHistory.css";
+import PropTypes from 'prop-types';
 
 export default function TransactionHistory({ transaction }) {
   return (
@@ -19,8 +20,8 @@ export default function TransactionHistory({ transaction }) {
       </div>
       {transaction.map((transactions) => {
         return (
-          <div >
-            <ul className="type-list">
+          <div key={transactions.id} >
+            <ul   className="type-list">
               <li className="list">{transactions.type}</li>
               <li className="list">{transactions.amount}</li>
               <li className="list">{transactions.currency}</li>
@@ -30,4 +31,8 @@ export default function TransactionHistory({ transaction }) {
       })}
     </div>
   );
+}
+
+TransactionHistory.propTypes ={
+  transaction: PropTypes.array.isRequired,
 }

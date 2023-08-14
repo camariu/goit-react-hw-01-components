@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "./FriendList.css"
 
 export default function FriendList({ friends }) {
+ 
   return (
     <div className="friend">
       {friends.map((friends) => {
@@ -22,4 +24,8 @@ export default function FriendList({ friends }) {
       })}
     </div>
   );
+}
+
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
 }
